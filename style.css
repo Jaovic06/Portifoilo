@@ -65,3 +65,27 @@ body {
 .social a:hover {
     text-decoration: underline;
 }
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project-title {
+    color: #e63946;
+    margin-top: 0;
+}
+
+.project-description {
+    color: #f0f0f0;
+}
+
