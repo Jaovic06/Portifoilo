@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
     <header class="header">
-        <h1 class="title">João's Portfolio</h1>
+        <h1 class="title">Bem-vindo ao João's Portfolio</h1>
     </header>
     <nav class="navbar">
-        <a href="#portfolio" class="nav-link">Projetos</a>
-        <a href="#gallery" class="nav-link">Galeria</a>
-        <a href="#contact" class="nav-link">Contato</a>
+        <a href="#portfolio" class="nav-link"><i class="fas fa-project-diagram"></i> Projetos</a>
+        <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galeria</a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
+        <button id="theme-toggle">🌙</button>
     </nav>
     <div class="section" id="portfolio">
         <h2 class="section-title">Portfólio de Projetos</h2>
@@ -79,13 +84,15 @@
         </div>
     </div>
     <footer class="footer">
+        <p id="datetime"></p>
         <p class="social">Conecte-se comigo nas redes sociais:</p>
         <p class="social">
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="tooltip" title="Twitter">Twitter</a> |
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="tooltip" title="LinkedIn">LinkedIn</a>
         </p>
         <p>&copy; 2024 João. Todos os direitos reservados.</p>
     </footer>
+    <button id="back-to-top">⬆️</button>
     <script src="script.js"></script>
 </body>
 </html>
