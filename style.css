@@ -29,6 +29,10 @@ body {
     margin: 0 10px;
 }
 
+.nav-link:hover {
+    color: #e74c3c; /* Cor ao passar o mouse */
+}
+
 .section {
     padding: 40px 20px;
     background-color: #282828; /* Fundo escuro das seções */
@@ -52,6 +56,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.project:hover, .image:hover {
+    transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
 }
 
 .project-title, .project-description {
@@ -87,6 +96,7 @@ body {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -102,4 +112,17 @@ body {
 
 .social {
     margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects, .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects, .gallery {
+        grid-template-columns: 1fr; /* Uma coluna em telas bem pequenas */
+    }
 }
