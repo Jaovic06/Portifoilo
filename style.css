@@ -1,13 +1,43 @@
+/* Fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Animação de carregamento */
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: 10000;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #e74c3c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #181818; /* Fundo escuro */
-    color: #f0f0f0; /* Texto claro */
+    background: linear-gradient(to right, #141E30, #243B55); /* Fundo gradiente */
+    color: #f0f0f0;
+    scroll-behavior: smooth; /* Scroll suave */
 }
 
 .header {
-    background-color: #333;
+    background: linear-gradient(to right, #3a6073, #16222A);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -15,114 +45,210 @@ body {
 
 .title {
     margin: 0;
+    text-shadow: 2px 2px #000; /* Sombra no título */
 }
 
 .navbar {
-    background-color: #444;
+    background: linear-gradient(to right, #3a6073, #16222A);
     text-align: center;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-link {
-    color: #fff;
+    color: #f0f0f0;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #e74c3c; /* Cor ao passar o mouse */
+    color: #e74c3c;
 }
 
 .section {
-    padding: 40px 20px;
-    background-color: #282828; /* Fundo escuro das seções */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin: 20px 0; /* Espaçamento entre as seções */
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .section-title {
-    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
 }
 
 .projects, .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Três colunas */
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
 .project, .image {
-    background-color: #333;
+    background-color: #3a3a3a; /* Fundo dos projetos e imagens */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Transição suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 .project:hover, .image:hover {
-    transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
-}
-
-.project-title, .project-description {
-    margin: 0 0 10px 0;
-    color: #fff; /* Texto claro */
+    transform: translateY(-5px); /* Efeito ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 .image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border: 2px solid #444; /* Borda para imagens */
-    border-radius: 8px; /* Moldura */
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+.image:hover img {
+    filter: blur(2px); /* Desfoque ao passar o mouse */
 }
 
 .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    margin-bottom: 10px;
+    max-width: 500px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #444;
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:hover, .contact-form textarea:hover,
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #e74c3c; /* Cor de foco nos campos do formulário */
 }
 
 .contact-form button {
-    background-color: #333;
+    padding: 10px 20px;
+    background-color: #e74c3c;
     color: #fff;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #444;
+    background-color: #c0392b;
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
     padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border-top: 1px solid #444;
 }
 
-.social {
-    margin: 0;
+.footer .social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer .social a:hover {
+    color: #e74c3c;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none; /* Oculto por padrão */
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #c0392b;
+}
+
+/* Tema claro */
+.light-theme {
+    background-color: #f0f0f0; /* Fundo claro */
+    color: #181818; /* Texto escuro */
+}
+
+.light-theme .header,
+.light-theme .navbar,
+.light-theme .footer {
+    background-color: #fff;
+    color: #181818;
+}
+
+.light-theme .nav-link,
+.light-theme #theme-toggle {
+    color: #181818;
+}
+
+.light-theme .section {
+    background-color: #fff;
+    color: #181818;
+}
+
+.light-theme .contact-form input,
+.light-theme .contact-form textarea {
+    background-color: #e0e0e0;
+    color: #181818;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .projects, .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 992px) {
     .projects, .gallery {
-        grid-template-columns: 1fr; /* Uma coluna em telas bem pequenas */
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas médias */
     }
 }
