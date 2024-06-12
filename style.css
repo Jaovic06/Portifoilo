@@ -145,6 +145,62 @@ body.dark {
     transform: scale(1.05);
 }
 
+/* Testimonials */
+.testimonials {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid #333;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial footer {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: right;
+}
+
+/* Newsletter */
+.newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.newsletter-form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 1rem);
+}
+
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.newsletter-form button:hover {
+    background: #555;
+}
+
 /* Contact Form */
 .contact-form {
     max-width: 600px;
