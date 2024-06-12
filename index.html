@@ -5,52 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="description" content="Portfólio de João, apresentando projetos de jogos indie, aplicativos de leitura de mangá, blogs de cultura pop e muito mais.">
-    <meta name="keywords" content="portfolio, jogos indie, mangá, cultura pop, loja geek, redes sociais, anime">
-    <meta name="author" content="João">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <h1 class="title">João's Portfolio</h1>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        <button class="theme-toggle" id="theme-toggle">Toggle Dark Mode</button>
     </header>
-    <nav class="navbar" role="navigation">
-        <a href="#portfolio" class="nav-link" aria-label="Projetos">Projetos</a>
-        <a href="#gallery" class="nav-link" aria-label="Galeria">Galeria</a>
-        <a href="#contact" class="nav-link" aria-label="Contato">Contato</a>
+    <nav class="navbar">
+        <a href="#portfolio" class="nav-link">Projetos</a>
+        <a href="#gallery" class="nav-link">Galeria</a>
+        <a href="#about" class="nav-link">Sobre</a>
+        <a href="#contact" class="nav-link">Contato</a>
     </nav>
-    <div class="section" id="portfolio" role="region" aria-labelledby="portfolio-title">
-        <h2 class="section-title" id="portfolio-title">Portfólio de Projetos</h2>
+    <div class="section" id="portfolio">
+        <h2 class="section-title">Portfólio de Projetos</h2>
         <div class="projects">
             <div class="project">
-                <h3 class="project-title">Jogo Indie de Aventura</h3>
+                <h3 class="project-title"><i class="icon">&#128187;</i> Jogo Indie de Aventura</h3>
                 <p class="project-description">Um emocionante jogo indie de aventura onde você explora um mundo misterioso cheio de segredos.</p>
             </div>
             <div class="project">
-                <h3 class="project-title">Aplicativo de Leitura de Mangá</h3>
+                <h3 class="project-title"><i class="icon">&#128214;</i> Aplicativo de Leitura de Mangá</h3>
                 <p class="project-description">Um aplicativo para leitura de mangá online, com uma vasta coleção de títulos e recursos de personalização.</p>
             </div>
             <div class="project">
-                <h3 class="project-title">Blog sobre Cultura Pop</h3>
+                <h3 class="project-title"><i class="icon">&#128241;</i> Blog sobre Cultura Pop</h3>
                 <p class="project-description">Um blog dedicado à cultura pop, com análises de filmes, séries, quadrinhos e muito mais.</p>
             </div>
             <div class="project">
-                <h3 class="project-title">Loja Virtual de Produtos Geek</h3>
+                <h3 class="project-title"><i class="icon">&#128722;</i> Loja Virtual de Produtos Geek</h3>
                 <p class="project-description">Uma loja virtual especializada em produtos geek, incluindo camisetas, action figures, e acessórios temáticos.</p>
             </div>
             <div class="project">
-                <h3 class="project-title">Rede Social para Fãs de Anime</h3>
+                <h3 class="project-title"><i class="icon">&#128250;</i> Rede Social para Fãs de Anime</h3>
                 <p class="project-description">Uma rede social exclusiva para fãs de anime, onde os usuários podem discutir seus animes favoritos, compartilhar fanarts e fazer amigos.</p>
             </div>
             <div class="project">
-                <h3 class="project-title">Canal do YouTube sobre Jogos Indie</h3>
+                <h3 class="project-title"><i class="icon">&#127916;</i> Canal do YouTube sobre Jogos Indie</h3>
                 <p class="project-description">Um canal do YouTube dedicado a análises, gameplay e entrevistas sobre jogos indie inovadores e emocionantes.</p>
             </div>
         </div>
     </div>
-    <div class="section" id="gallery" role="region" aria-labelledby="gallery-title">
-        <h2 class="section-title" id="gallery-title">Galeria de Imagens</h2>
+    <div class="section" id="gallery">
+        <h2 class="section-title">Galeria de Imagens</h2>
         <div class="gallery">
             <div class="image">
                 <img src="https://blog.useartools.com.br/wp-content/uploads/2023/08/gao-kegong-1248%E2%80%931310-evening-clouds.jpeg" alt="Imagem 1">
@@ -72,26 +70,27 @@
             </div>
         </div>
     </div>
-    <div class="section" id="contact" role="region" aria-labelledby="contact-title">
-        <h2 class="section-title" id="contact-title">Contato</h2>
+    <div class="section" id="about">
+        <h2 class="section-title">Sobre Mim</h2>
+        <p class="about-description">Sou João, desenvolvedor apaixonado por tecnologia, mangás e jogos indie. Este é meu portfólio onde compartilho meus projetos e interesses. Sinta-se à vontade para explorar e entrar em contato!</p>
+    </div>
+    <div class="section" id="contact">
+        <h2 class="section-title">Contato</h2>
         <div class="contact-form">
             <form action="https://formsubmit.co/your-email" method="POST">
-                <input type="text" name="name" placeholder="Seu Nome" required aria-required="true">
-                <input type="email" name="email" placeholder="Seu Email" required aria-required="true">
-                <textarea name="message" rows="5" placeholder="Sua Mensagem" required aria-required="true"></textarea>
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <p class="social">Conecte-se comigo nas redes sociais:</p>
         <p class="social">
             <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
             <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         </p>
-        <button id="back-to-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
     </footer>
-    <div id="loader" class="loader" aria-hidden="true"></div>
-    <script src="script.js"></script>
 </body>
 </html>
