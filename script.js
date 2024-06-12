@@ -1,18 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
+    const backToTopButton = document.getElementById('back-to-top');
+    const loader = document.getElementById('loader');
 
     themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        if (body.classList.contains('light-theme')) {
-            themeToggle.textContent = '🌙';
-        } else {
-            themeToggle.textContent = '☀️';
-        }
+        body.classList.toggle('dark');
+        localStorage.setItem('dark-mode', body.classList.contains('dark'));
     });
 
-    const backToTopButton = document.getElementById('back-to-top');
+    // Restore theme on page load
+    if (localStorage.getItem('dark-mode') === 'true') {
+        body.classList.add('dark');
+    }
 
+    // Back to top functionality
     window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
             backToTopButton.style.display = 'block';
@@ -25,19 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Mensagem enviada com sucesso!');
-        form.reset();
-    });
-
-    const loading = document.getElementById('loading');
+    // Show loader on page load
+    loader.classList.add('active');
     window.addEventListener('load', () => {
-        loading.style.display = 'none';
+        loader.classList.remove('active');
     });
-
-    const datetime = document.getElementById('datetime');
-    const now = new Date();
-    datetime.textContent = `Data e Hora: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
 });
