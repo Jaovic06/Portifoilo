@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Portfólio de João, apresentando projetos de jogos indie, aplicativos de leitura de mangá, blogs de cultura pop e muito mais.">
+    <meta name="keywords" content="portfolio, jogos indie, mangá, cultura pop, loja geek, redes sociais, anime">
+    <meta name="author" content="João">
 </head>
 <body>
-    <div id="loading">
-        <div class="spinner"></div>
-    </div>
     <header class="header">
-        <h1 class="title">Bem-vindo ao João's Portfolio</h1>
+        <h1 class="title">João's Portfolio</h1>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     </header>
-    <nav class="navbar">
-        <a href="#portfolio" class="nav-link"><i class="fas fa-project-diagram"></i> Projetos</a>
-        <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galeria</a>
-        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
-        <button id="theme-toggle">🌙</button>
+    <nav class="navbar" role="navigation">
+        <a href="#portfolio" class="nav-link" aria-label="Projetos">Projetos</a>
+        <a href="#gallery" class="nav-link" aria-label="Galeria">Galeria</a>
+        <a href="#contact" class="nav-link" aria-label="Contato">Contato</a>
     </nav>
-    <div class="section" id="portfolio">
-        <h2 class="section-title">Portfólio de Projetos</h2>
+    <div class="section" id="portfolio" role="region" aria-labelledby="portfolio-title">
+        <h2 class="section-title" id="portfolio-title">Portfólio de Projetos</h2>
         <div class="projects">
             <div class="project">
                 <h3 class="project-title">Jogo Indie de Aventura</h3>
@@ -49,8 +49,8 @@
             </div>
         </div>
     </div>
-    <div class="section" id="gallery">
-        <h2 class="section-title">Galeria de Imagens</h2>
+    <div class="section" id="gallery" role="region" aria-labelledby="gallery-title">
+        <h2 class="section-title" id="gallery-title">Galeria de Imagens</h2>
         <div class="gallery">
             <div class="image">
                 <img src="https://blog.useartools.com.br/wp-content/uploads/2023/08/gao-kegong-1248%E2%80%931310-evening-clouds.jpeg" alt="Imagem 1">
@@ -72,27 +72,26 @@
             </div>
         </div>
     </div>
-    <div class="section" id="contact">
-        <h2 class="section-title">Contato</h2>
+    <div class="section" id="contact" role="region" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title">Contato</h2>
         <div class="contact-form">
             <form action="https://formsubmit.co/your-email" method="POST">
-                <input type="text" name="name" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu Email" required>
-                <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <input type="text" name="name" placeholder="Seu Nome" required aria-required="true">
+                <input type="email" name="email" placeholder="Seu Email" required aria-required="true">
+                <textarea name="message" rows="5" placeholder="Sua Mensagem" required aria-required="true"></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
-    <footer class="footer">
-        <p id="datetime"></p>
+    <footer class="footer" role="contentinfo">
         <p class="social">Conecte-se comigo nas redes sociais:</p>
         <p class="social">
-            <a href="https://twitter.com/yourprofile" target="_blank" class="tooltip" title="Twitter">Twitter</a> |
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="tooltip" title="LinkedIn">LinkedIn</a>
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         </p>
-        <p>&copy; 2024 João. Todos os direitos reservados.</p>
+        <button id="back-to-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
     </footer>
-    <button id="back-to-top">⬆️</button>
+    <div id="loader" class="loader" aria-hidden="true"></div>
     <script src="script.js"></script>
 </body>
 </html>
